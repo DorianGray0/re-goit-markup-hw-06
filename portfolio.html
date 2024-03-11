@@ -55,21 +55,40 @@
       <section class="portfolio">
         <div class="container">
           <h2 class="visually-hidden">Portfolio</h2>
-          <ul class="filter-list">
-            <li class="filter-item">
-              <button class="filter-btn btn" type="button">All</button>
+          <ul class="portfolio-filter-list">
+            <li class="portfolio-filter-item">
+              <label class="portfolio-filter-field">
+                <input type="radio" name="All" class="portfolio-filter-inp visually-hidden" />
+                <span class="portfolio-filter-btn">All</span>
+              </label>
             </li>
-            <li class="filter-item">
-              <button class="filter-btn btn" type="button">Web Site</button>
+
+            <li class="portfolio-filter-item">
+              <label class="portfolio-filter-field">
+                <input type="radio" name="Web Site" class="portfolio-filter-inp visually-hidden" />
+                <span class="portfolio-filter-btn">Web Site</span>
+              </label>
             </li>
-            <li class="filter-item">
-              <button class="filter-btn btn" type="button">App</button>
+
+            <li class="portfolio-filter-item">
+              <label class="portfolio-filter-field">
+                <input type="radio" name="App" class="portfolio-filter-inp visually-hidden" />
+                <span class="portfolio-filter-btn">App</span>
+              </label>
             </li>
-            <li class="filter-item">
-              <button class="filter-btn btn" type="button">Design</button>
+
+            <li class="portfolio-filter-item">
+              <label class="portfolio-filter-field">
+                <input type="radio" name="Design" class="portfolio-filter-inp visually-hidden" />
+                <span class="portfolio-filter-btn">Design</span>
+              </label>
             </li>
-            <li class="filter-item">
-              <button class="filter-btn btn" type="button">Marketing</button>
+
+            <li class="portfolio-filter-item">
+              <label class="portfolio-filter-field">
+                <input type="radio" name="Marketing" class="portfolio-filter-inp visually-hidden" />
+                <span class="portfolio-filter-btn">Marketing</span>
+              </label>
             </li>
           </ul>
 
@@ -260,6 +279,28 @@
             </li>
           </ul>
         </div>
+
+        <form class="footer-subscribe-wrap">
+          <label class="subscribe-field">
+            <span class="subscribe-label footer-soc-title title">Subscribe</span>
+            <input
+              type="email"
+              name="email"
+              class="subscribe-email"
+              placeholder="E-mail"
+              required
+            />
+          </label>
+
+          <button type="submit" class="subscribe-btn">
+            Subscribe
+            <span class="subscribe-thumb">
+              <svg class="subscribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-plain"></use>
+              </svg>
+            </span>
+          </button>
+        </form>
       </div>
     </footer>
   </body>
