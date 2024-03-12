@@ -15,6 +15,8 @@
   --margine-tile: 8px;
   --hero-gradient: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
   --cubic-regular: cubic-bezier(0.4, 0, 0.2, 1);
+  --box-shadow-cards: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 body {
@@ -43,7 +45,7 @@ ol {
 
 img {
   display: block;
-  /* max-width: 100%; */
+  max-width: 100%;
   height: auto;
 }
 
@@ -634,8 +636,18 @@ img {
 
 .portfolio-item {
   flex-basis: calc((100% - 2 * var(--regular-gap)) / 3);
+}
 
+.portfolio-link-thumb {
+  display: block;
+
+  outline: transparent;
   transition: box-shadow 250ms var(--cubic-regular);
+}
+
+.portfolio-link-thumb:hover,
+.portfolio-link-thumb:focus {
+  box-shadow: var(--box-shadow-cards);
 }
 
 .portfolio-overlay {
@@ -661,17 +673,13 @@ img {
   background-color: var(--pressed-state-color);
 }
 
-.portfolio-item:hover .portfolio-wrap-text {
+.portfolio-link-thumb:hover .portfolio-wrap-text,
+.portfolio-link-thumb:focus .portfolio-wrap-text {
   transform: translateY(0);
 }
 
 .portfolio-overlay-text {
   color: var(--secondary-text-color);
-}
-
-.portfolio-item:hover {
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16),
-    0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item-wrap {
@@ -965,7 +973,7 @@ img {
   fill: transparent;
 
   transition: fill 250ms var(--cubic-regular), background-color 250ms var(--cubic-regular),
-    border-color 250ms var(--cubic-regular);
+    border-color 250ms var(--cubic-regular), box-shadow 250ms var(--cubic-regular);
 }
 
 .modal-form-privacy:checked + .modal-thumb-privacy {
@@ -973,6 +981,11 @@ img {
 
   background-color: var(--pressed-state-color);
   border-color: var(--pressed-state-color);
+}
+
+.modal-form-privacy:focus + .modal-thumb-privacy {
+  box-shadow: 0 0 0 0.2em #7ed321;
+  border-color: transparent;
 }
 
 .modal-label-text.link-privacy {
