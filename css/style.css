@@ -621,7 +621,7 @@ img {
 
 .portfolio-filter-btn:hover,
 .portfolio-filter-btn:focus,
-.portfolio-filter-inp:checked + .portfolio-filter-btn {
+.portfolio-filter-radio:checked + .portfolio-filter-btn {
   color: var(--secondary-title-color);
 
   background-color: var(--pressed-state-color);
