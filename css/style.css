@@ -990,10 +990,10 @@ img {
   border-color: var(--pressed-state-color);
 }
 
-.modal-form-privacy:focus + .modal-thumb-privacy {
+/* .modal-form-privacy:focus + .modal-thumb-privacy {
   box-shadow: 0 0 0 0.2em #7ed321;
   border-color: transparent;
-}
+} */
 
 .modal-label-text.link-privacy {
   margin-left: 8px;
